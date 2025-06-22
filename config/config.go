@@ -10,7 +10,7 @@ type Config struct {
 }
 
 func InitConfig() *Config {
-	port := flag.String("port", "50052", "port to listen on")
+	port := flag.String("port", ":50052", "port to listen on")
 
 	flag.Parse()
 

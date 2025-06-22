@@ -4,7 +4,7 @@ package spot_instrument_v1;
 
 import "spot_instrument_v1/spot_intrument_service_messages.proto";
 
-option go_package = "github.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1";
+option go_package = "github.com/ewik2k21/grpcSpotInstrumentService/pkg";
 
 service SpotInstrumentService {
   rpc ViewMarkets(ViewMarketsRequest) returns (ViewMarketsResponse);

@@ -4,10 +4,9 @@
 // 	protoc        v6.31.1
 // source: spot_instrument_v1/spot_intrument_service_messages.proto
 
-package spot_instrument_v1
+package pkg
 
 import (
-	pkg "github.com/ewik2k21/grpcSpotInstrumentService/pkg"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -24,7 +23,7 @@ const (
 
 type ViewMarketsRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	UserRole      pkg.UserRole           `protobuf:"varint,1,opt,name=user_role,json=userRole,proto3,enum=common.UserRole" json:"user_role,omitempty"`
+	UserRole      UserRole               `protobuf:"varint,1,opt,name=user_role,json=userRole,proto3,enum=common.UserRole" json:"user_role,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -59,11 +58,11 @@ func (*ViewMarketsRequest) Descriptor() ([]byte, []int) {
 	return file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *ViewMarketsRequest) GetUserRole() pkg.UserRole {
+func (x *ViewMarketsRequest) GetUserRole() UserRole {
 	if x != nil {
 		return x.UserRole
 	}
-	return pkg.UserRole(0)
+	return UserRole_USER_ROLE_UNSPECIFIED
 }
 
 type ViewMarketsResponse struct {
@@ -173,7 +172,7 @@ const file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDesc = ""
 	"\amarkets\x18\x01 \x03(\v2\x1a.spot_instrument_v1.MarketR\amarkets\",\n" +
 	"\x06Market\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
-	"\x04name\x18\x02 \x01(\tR\x04nameBFZDgithub.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1b\x06proto3"
+	"\x04name\x18\x02 \x01(\tR\x04nameB3Z1github.com/ewik2k21/grpcSpotInstrumentService/pkgb\x06proto3"
 
 var (
 	file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescOnce sync.Once
@@ -192,7 +191,7 @@ var file_spot_instrument_v1_spot_intrument_service_messages_proto_goTypes = []an
 	(*ViewMarketsRequest)(nil),  // 0: spot_instrument_v1.ViewMarketsRequest
 	(*ViewMarketsResponse)(nil), // 1: spot_instrument_v1.ViewMarketsResponse
 	(*Market)(nil),              // 2: spot_instrument_v1.Market
-	(pkg.UserRole)(0),           // 3: common.UserRole
+	(UserRole)(0),               // 3: common.UserRole
 }
 var file_spot_instrument_v1_spot_intrument_service_messages_proto_depIdxs = []int32{
 	3, // 0: spot_instrument_v1.ViewMarketsRequest.user_role:type_name -> common.UserRole
@@ -209,6 +208,7 @@ func file_spot_instrument_v1_spot_intrument_service_messages_proto_init() {
 	if File_spot_instrument_v1_spot_intrument_service_messages_proto != nil {
 		return
 	}
+	file_common_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{

@@ -18,7 +18,7 @@ func NewSpotInstrumentHandler(service services.SpotInstrumentService) *SpotInstr
 func (h *SpotInstrumentHandler) ViewMarkets(ctx context.Context, req *spotInstrument.ViewMarketsRequest) (res *spotInstrument.ViewMarketsResponse, err error) {
 	userRole := req.GetUserRole()
 
-	markets, err := h.service.GetAllMarkets(userRole)
+	markets, err := h.service.GetAllMarkets(userRole.String())
 	if err != nil {
 		return nil, err
 	}

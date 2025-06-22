@@ -4,7 +4,7 @@
 // 	protoc        v6.31.1
 // source: spot_instrument_v1/spot_instrument_service.proto
 
-package spot_instrument_v1
+package pkg
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -26,7 +26,7 @@ const file_spot_instrument_v1_spot_instrument_service_proto_rawDesc = "" +
 	"\n" +
 	"0spot_instrument_v1/spot_instrument_service.proto\x12\x12spot_instrument_v1\x1a8spot_instrument_v1/spot_intrument_service_messages.proto2w\n" +
 	"\x15SpotInstrumentService\x12^\n" +
-	"\vViewMarkets\x12&.spot_instrument_v1.ViewMarketsRequest\x1a'.spot_instrument_v1.ViewMarketsResponseBFZDgithub.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1b\x06proto3"
+	"\vViewMarkets\x12&.spot_instrument_v1.ViewMarketsRequest\x1a'.spot_instrument_v1.ViewMarketsResponseB3Z1github.com/ewik2k21/grpcSpotInstrumentService/pkgb\x06proto3"
 
 var file_spot_instrument_v1_spot_instrument_service_proto_goTypes = []any{
 	(*ViewMarketsRequest)(nil),  // 0: spot_instrument_v1.ViewMarketsRequest

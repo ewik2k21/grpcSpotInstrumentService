@@ -6,7 +6,7 @@ import (
 	"github.com/ewik2k21/grpcSpotInstrumentService/internal/handlers"
 	"github.com/ewik2k21/grpcSpotInstrumentService/internal/repositories"
 	"github.com/ewik2k21/grpcSpotInstrumentService/internal/services"
-	"github.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1"
+	spot_instrument_v1 "github.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1"
 	"google.golang.org/grpc"
 	"log/slog"
 	"net"

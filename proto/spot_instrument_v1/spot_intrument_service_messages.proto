@@ -4,7 +4,7 @@ package spot_instrument_v1;
 
 import "common.proto";
 
-option go_package = "github.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1";
+option go_package = "github.com/ewik2k21/grpcSpotInstrumentService/pkg";
 
 message ViewMarketsRequest{
   common.UserRole user_role = 1;
