@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package spot_instrument_v1;
 
-import "spot_instrument_v1/spot_intrument_service_messages.proto";
+import "spot_intrument_service_messages.proto";
 
 option go_package = "github.com/ewik2k21/grpcSpotInstrumentService/pkg";
 

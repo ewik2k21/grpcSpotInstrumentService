@@ -6,24 +6,32 @@ import (
 )
 
 type Config struct {
-	Port string
+	GRPCPort string
+	HttpPort string
 }
 
 func InitConfig() *Config {
-	port := flag.String("port", ":50052", "port to listen on")
+	grpcPort := flag.String("grpcPort", ":50052", "grpcPort to listen on")
+	httpPort := flag.String("httpPort", ":2112", "httpPort for metrics")
 
 	flag.Parse()
 
 	cfg := &Config{
-		Port: *port,
+		GRPCPort: *grpcPort,
+		HttpPort: *httpPort,
 	}
 
-	if *port == "8080" {
+	if *grpcPort == ":50052" {
 		if envPort := os.Getenv("GRPC_PORT"); envPort != "" {
-			cfg.Port = envPort
+			cfg.GRPCPort = envPort
 		}
 	}
 
+	if *httpPort == ":2112" {
+		if envPort := os.Getenv("HTTP_PORT"); envPort != "" {
+			cfg.HttpPort = envPort
+		}
+	}
 	return cfg
 
 }
