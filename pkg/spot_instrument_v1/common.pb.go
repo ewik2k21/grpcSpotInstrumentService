@@ -4,7 +4,7 @@
 // 	protoc        v6.31.1
 // source: common.proto
 
-package pkg
+package spot_instrument_v1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -78,7 +78,7 @@ const file_common_proto_rawDesc = "" +
 	"\bUserRole\x12\x19\n" +
 	"\x15USER_ROLE_UNSPECIFIED\x10\x00\x12\x12\n" +
 	"\x0eUSER_ROLE_USER\x10\x01\x12\x13\n" +
-	"\x0fUSER_ROLE_ADMIN\x10\x02B3Z1github.com/ewik2k21/grpcSpotInstrumentService/pkgb\x06proto3"
+	"\x0fUSER_ROLE_ADMIN\x10\x02BFZDgithub.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1b\x06proto3"
 
 var (
 	file_common_proto_rawDescOnce sync.Once

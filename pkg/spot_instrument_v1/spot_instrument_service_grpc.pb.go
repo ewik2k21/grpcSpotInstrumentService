@@ -4,7 +4,7 @@
 // - protoc             v6.31.1
 // source: spot_instrument_v1/spot_instrument_service.proto
 
-package pkg
+package spot_instrument_v1
 
 import (
 	context "context"

@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.31.1
-// source: spot_instrument_v1/spot_intrument_service_messages.proto
+// source: spot_instrument_v1/spot_instrument_service_messages.proto
 
-package pkg
+package spot_instrument_v1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -30,7 +30,7 @@ type ViewMarketsRequest struct {
 
 func (x *ViewMarketsRequest) Reset() {
 	*x = ViewMarketsRequest{}
-	mi := &file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes[0]
+	mi := &file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *ViewMarketsRequest) String() string {
 func (*ViewMarketsRequest) ProtoMessage() {}
 
 func (x *ViewMarketsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes[0]
+	mi := &file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *ViewMarketsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ViewMarketsRequest.ProtoReflect.Descriptor instead.
 func (*ViewMarketsRequest) Descriptor() ([]byte, []int) {
-	return file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescGZIP(), []int{0}
+	return file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ViewMarketsRequest) GetUserRole() UserRole {
@@ -74,7 +74,7 @@ type ViewMarketsResponse struct {
 
 func (x *ViewMarketsResponse) Reset() {
 	*x = ViewMarketsResponse{}
-	mi := &file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes[1]
+	mi := &file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -86,7 +86,7 @@ func (x *ViewMarketsResponse) String() string {
 func (*ViewMarketsResponse) ProtoMessage() {}
 
 func (x *ViewMarketsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes[1]
+	mi := &file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -99,7 +99,7 @@ func (x *ViewMarketsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ViewMarketsResponse.ProtoReflect.Descriptor instead.
 func (*ViewMarketsResponse) Descriptor() ([]byte, []int) {
-	return file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescGZIP(), []int{1}
+	return file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ViewMarketsResponse) GetMarkets() []*Market {
@@ -119,7 +119,7 @@ type Market struct {
 
 func (x *Market) Reset() {
 	*x = Market{}
-	mi := &file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes[2]
+	mi := &file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -131,7 +131,7 @@ func (x *Market) String() string {
 func (*Market) ProtoMessage() {}
 
 func (x *Market) ProtoReflect() protoreflect.Message {
-	mi := &file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes[2]
+	mi := &file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -144,7 +144,7 @@ func (x *Market) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Market.ProtoReflect.Descriptor instead.
 func (*Market) Descriptor() ([]byte, []int) {
-	return file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescGZIP(), []int{2}
+	return file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Market) GetId() string {
@@ -161,39 +161,39 @@ func (x *Market) GetName() string {
 	return ""
 }
 
-var File_spot_instrument_v1_spot_intrument_service_messages_proto protoreflect.FileDescriptor
+var File_spot_instrument_v1_spot_instrument_service_messages_proto protoreflect.FileDescriptor
 
-const file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDesc = "" +
+const file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDesc = "" +
 	"\n" +
-	"8spot_instrument_v1/spot_intrument_service_messages.proto\x12\x12spot_instrument_v1\x1a\fcommon.proto\"C\n" +
+	"9spot_instrument_v1/spot_instrument_service_messages.proto\x12\x12spot_instrument_v1\x1a\fcommon.proto\"C\n" +
 	"\x12ViewMarketsRequest\x12-\n" +
 	"\tuser_role\x18\x01 \x01(\x0e2\x10.common.UserRoleR\buserRole\"K\n" +
 	"\x13ViewMarketsResponse\x124\n" +
 	"\amarkets\x18\x01 \x03(\v2\x1a.spot_instrument_v1.MarketR\amarkets\",\n" +
 	"\x06Market\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
-	"\x04name\x18\x02 \x01(\tR\x04nameB3Z1github.com/ewik2k21/grpcSpotInstrumentService/pkgb\x06proto3"
+	"\x04name\x18\x02 \x01(\tR\x04nameBFZDgithub.com/ewik2k21/grpcSpotInstrumentService/pkg/spot_instrument_v1b\x06proto3"
 
 var (
-	file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescOnce sync.Once
-	file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescData []byte
+	file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescOnce sync.Once
+	file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescData []byte
 )
 
-func file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescGZIP() []byte {
-	file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescOnce.Do(func() {
-		file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDesc), len(file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDesc)))
+func file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescGZIP() []byte {
+	file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescOnce.Do(func() {
+		file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDesc), len(file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDesc)))
 	})
-	return file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDescData
+	return file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDescData
 }
 
-var file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-var file_spot_instrument_v1_spot_intrument_service_messages_proto_goTypes = []any{
+var file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_spot_instrument_v1_spot_instrument_service_messages_proto_goTypes = []any{
 	(*ViewMarketsRequest)(nil),  // 0: spot_instrument_v1.ViewMarketsRequest
 	(*ViewMarketsResponse)(nil), // 1: spot_instrument_v1.ViewMarketsResponse
 	(*Market)(nil),              // 2: spot_instrument_v1.Market
 	(UserRole)(0),               // 3: common.UserRole
 }
-var file_spot_instrument_v1_spot_intrument_service_messages_proto_depIdxs = []int32{
+var file_spot_instrument_v1_spot_instrument_service_messages_proto_depIdxs = []int32{
 	3, // 0: spot_instrument_v1.ViewMarketsRequest.user_role:type_name -> common.UserRole
 	2, // 1: spot_instrument_v1.ViewMarketsResponse.markets:type_name -> spot_instrument_v1.Market
 	2, // [2:2] is the sub-list for method output_type
@@ -203,9 +203,9 @@ var file_spot_instrument_v1_spot_intrument_service_messages_proto_depIdxs = []in
 	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_spot_instrument_v1_spot_intrument_service_messages_proto_init() }
-func file_spot_instrument_v1_spot_intrument_service_messages_proto_init() {
-	if File_spot_instrument_v1_spot_intrument_service_messages_proto != nil {
+func init() { file_spot_instrument_v1_spot_instrument_service_messages_proto_init() }
+func file_spot_instrument_v1_spot_instrument_service_messages_proto_init() {
+	if File_spot_instrument_v1_spot_instrument_service_messages_proto != nil {
 		return
 	}
 	file_common_proto_init()
@@ -213,17 +213,17 @@ func file_spot_instrument_v1_spot_intrument_service_messages_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDesc), len(file_spot_instrument_v1_spot_intrument_service_messages_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDesc), len(file_spot_instrument_v1_spot_instrument_service_messages_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_spot_instrument_v1_spot_intrument_service_messages_proto_goTypes,
-		DependencyIndexes: file_spot_instrument_v1_spot_intrument_service_messages_proto_depIdxs,
-		MessageInfos:      file_spot_instrument_v1_spot_intrument_service_messages_proto_msgTypes,
+		GoTypes:           file_spot_instrument_v1_spot_instrument_service_messages_proto_goTypes,
+		DependencyIndexes: file_spot_instrument_v1_spot_instrument_service_messages_proto_depIdxs,
+		MessageInfos:      file_spot_instrument_v1_spot_instrument_service_messages_proto_msgTypes,
 	}.Build()
-	File_spot_instrument_v1_spot_intrument_service_messages_proto = out.File
-	file_spot_instrument_v1_spot_intrument_service_messages_proto_goTypes = nil
-	file_spot_instrument_v1_spot_intrument_service_messages_proto_depIdxs = nil
+	File_spot_instrument_v1_spot_instrument_service_messages_proto = out.File
+	file_spot_instrument_v1_spot_instrument_service_messages_proto_goTypes = nil
+	file_spot_instrument_v1_spot_instrument_service_messages_proto_depIdxs = nil
 }
